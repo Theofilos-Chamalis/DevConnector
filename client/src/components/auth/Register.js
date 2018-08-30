@@ -13,7 +13,7 @@ class Register extends Component {
             errors: {}
         };
 
-        // This is to bind the onChange listener function with the 'this' of the state
+        // This is to bind the onChange listener function with the 'this' of the state (We don't need these if we use arrow functions like in Login component)
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 
 class Navbar extends Component {
     render() {
-
         // Return is only for JSX
         return (
             <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
