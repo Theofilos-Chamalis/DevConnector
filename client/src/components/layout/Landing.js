@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link }             from 'react-router-dom';
 
 class Landing extends Component {
-    render() {
+    render () {
         return (
             <div className="landing">
                 <div className="dark-overlay landing-inner text-light">
