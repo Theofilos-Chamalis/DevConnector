@@ -133,6 +133,7 @@ router.post (
         // Skills - Split into array
         if ( typeof req.body.skills !== 'undefined' ) {
             profileFields.skills = req.body.skills.split ( ',' );
+            profileFields.skills = profileFields.skills.map ( str => str.trim () );
         }
 
         // Social initialization
