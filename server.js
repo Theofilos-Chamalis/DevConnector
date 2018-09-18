@@ -16,11 +16,15 @@ app.use ( bodyParser.json () );
 // DB Config
 const db = require ( './config/keys' ).mongoURI;
 
+// Support for MongoDB 4+
+mongoose.set ( 'useFindAndModify', false );
+mongoose.set ( 'useCreateIndex', true );
+mongoose.set ( 'useNewUrlParser', true );
+
 // Connect to MongoDB
 mongoose
     .connect (
-        db,
-        { useNewUrlParser : true }
+        db
     )
     .then ( () => console.log ( 'MongoDB Connected' ) )
     .catch ( err => console.log ( `MongoDB Connection Error: ${err}` ) );

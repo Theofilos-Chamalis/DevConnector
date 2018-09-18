@@ -117,16 +117,34 @@ router.post (
             return res.status ( 400 ).json ( errors );
         }
 
+        // Check if urls (website and social) contain the http
+        // prefix since validation does not check for it
+        const containsHttp = ( url ) => {
+            if ( url.includes ( 'http' ) ) {
+                return url;
+            } else {
+                return `http://${url}`;
+            }
+        };
+
+        const containsHttps = ( url ) => {
+            if ( url.includes ( 'https' ) ) {
+                return url;
+            } else {
+                return `https://${url}`;
+            }
+        };
+
         // Get fields
         const profileFields = {};
         profileFields.user = req.user.id;
 
         if ( req.body.handle ) profileFields.handle = req.body.handle;
         if ( req.body.company ) profileFields.company = req.body.company;
-        if ( req.body.website ) profileFields.website = req.body.website;
         if ( req.body.location ) profileFields.location = req.body.location;
         if ( req.body.bio ) profileFields.bio = req.body.bio;
         if ( req.body.status ) profileFields.status = req.body.status;
+        if ( req.body.website ) profileFields.website = containsHttp ( req.body.website );
         if ( req.body.githubusername ) {
             profileFields.githubusername = req.body.githubusername;
         }
@@ -138,11 +156,11 @@ router.post (
 
         // Social initialization
         profileFields.social = {};
-        if ( req.body.youtube ) profileFields.social.youtube = req.body.youtube;
-        if ( req.body.twitter ) profileFields.social.twitter = req.body.twitter;
-        if ( req.body.facebook ) profileFields.social.facebook = req.body.facebook;
-        if ( req.body.linkedin ) profileFields.social.linkedin = req.body.linkedin;
-        if ( req.body.instagram ) profileFields.social.instagram = req.body.instagram;
+        if ( req.body.youtube ) profileFields.social.youtube = containsHttps ( req.body.youtube );
+        if ( req.body.twitter ) profileFields.social.twitter = containsHttps ( req.body.twitter );
+        if ( req.body.facebook ) profileFields.social.facebook = containsHttps ( req.body.facebook );
+        if ( req.body.linkedin ) profileFields.social.linkedin = containsHttps ( req.body.linkedin );
+        if ( req.body.instagram ) profileFields.social.instagram = containsHttps ( req.body.instagram );
 
         Profile.findOne ( { user : req.user.id } ).then ( profile => {
             if ( profile ) {
