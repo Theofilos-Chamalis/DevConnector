@@ -188,7 +188,7 @@ router.post (
                 post.save ().then ( post => res.json ( post ) );
             } )
             .catch ( err =>
-                res.status ( 404 ).json ( { postnotfound : 'Post was not found' } )
+                res.status ( 404 ).json ( { postnotfound : 'Posts was not found' } )
             );
     }
 );
@@ -225,7 +225,7 @@ router.delete (
                 post.save ().then ( post => res.json ( post ) );
             } )
             .catch ( err =>
-                res.status ( 404 ).json ( { postnotfound : 'Post was not found' } )
+                res.status ( 404 ).json ( { postnotfound : 'Posts was not found' } )
             );
     }
 );
