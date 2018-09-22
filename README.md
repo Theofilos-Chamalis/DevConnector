@@ -12,20 +12,13 @@ Visit it at: <a href="https://mighty-dusk-38771.herokuapp.com/" target="_blank">
 
 ```bash
 # clone repository
-https://github.com/RoshanSureen/dev-connector.git
+https://github.com/Theofilos-Chamalis/DevConnector.git
 
 # Install dependencies
-cd dev-connector && npm install
+cd devConnector && npm run install-all
 
-# create a .env file in root of your project
-touch .env
-```
-
-In the .env file create the below 2 enviroment varieables. Make sure it is exactly as shown below. No special charecters or spaces must be there.
-
-```
-DB_URL=YOUR_OWN_MONGO_URI
-TOKEN_SECRET=YOUR_OWN_SECRET
+# Enter your development & production MongoDB URI & JWT key
+Directory: config/
 ```
 
 To run the development server:
