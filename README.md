@@ -12,23 +12,23 @@ Home Page
 
 <img src="github-screenshots/homepage.png">
 
-&nbsp;
+<br>
 Profile Dashboard
 
 <img src="github-screenshots/dashboard.png">
 
-&nbsp;
+<br>
 Users Profiles
 
 <img src="github-screenshots/developers.png">
 
-&nbsp;
+<br>
 Post Feed
 
 <img src="github-screenshots/post-feed.png">
 
 ---
-&nbsp;
+<br>
 
 ## Quick Start
 
