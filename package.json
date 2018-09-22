@@ -8,6 +8,8 @@
   "main" : "server.js",
   "scripts" : {
     "client-install" : "npm i --prefix client",
+    "server-install" : "npm i",
+    "install-all" : "npm i && npm i --prefix client",
     "start" : "node server.js",
     "backend" : "nodemon server.js",
     "client" : "npm start --prefix client",
