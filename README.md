@@ -8,23 +8,23 @@ Visit it at: <a href="https://thedevconnector.herokuapp.com" target="_blank"> ht
 
 ## Screenshots
 
-Home Page
-
+<h4>Home Page</h4>
+<br>
 <img src="github-screenshots/homepage.png">
 
 <br>
-Profile Dashboard
-
+<h4>Profile Dashboard</h4>
+<br>
 <img src="github-screenshots/dashboard.png">
 
 <br>
-Users Profiles
-
+<h4>Users Profiles</h4>
+<br>
 <img src="github-screenshots/developers.png">
 
 <br>
-Post Feed
-
+<h4>Post Feed</h4>
+<br>
 <img src="github-screenshots/post-feed.png">
 
 ---
