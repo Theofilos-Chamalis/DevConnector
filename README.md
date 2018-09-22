@@ -41,6 +41,12 @@ To run only the frontend client
 npm run client
 ```
 
+To lint the whole project with eslint
+```
+# You can also change the eslint rules stored in.eslintrc
+npm run lint
+```
+
 <img src="img/dashboard.png">
 
 ---
@@ -57,7 +63,7 @@ npm run client
 
 ---
 
-## Main Technologies
+## Technologies Used
 
 ### Client Side
 
