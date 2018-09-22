@@ -6,9 +6,28 @@ This is a MERN based full stack real world bootstrapping application that can sp
 
 Visit it at: <a href="https://thedevconnector.herokuapp.com" target="_blank"> https://thedevconnector.herokuapp.com</a>
 
-<img src="img/home.png">
+## Screenshots
+
+Home Page
+<img src="github-screenshots/homepage.png">
 
 ---
+
+Profile Dashboard
+<img src="github-screenshots/dashboard.png">
+
+---
+
+Users Profiles
+<img src="github-screenshots/developers.png">
+
+---
+
+Post Feed
+<img src="github-screenshots/post-feed.png">
+
+---
+
 
 ## Quick Start
 
@@ -48,22 +67,6 @@ To lint the whole project with eslint
 # You can also change the eslint rules stored in.eslintrc
 npm run lint
 ```
-
-<img src="img/dashboard.png">
-
----
-
-<img src="img/developer-profiles.png">
-
----
-
-<img src="img/post-feed.png">
-
----
-
-<img src="img/comment-feed.png">
-
----
 
 ## Technologies Used
 
