@@ -2,7 +2,9 @@
 
 A social resume platform for developers. Create your portofolio by adding experience, education, skills or any important information of your career and post your comments or thoughts for other users.
 
-Visit it at: <a href="https://mighty-dusk-38771.herokuapp.com/" target="_blank"> https://thedevconnector.herokuapp.com</a>
+This is a MERN based full stack real world bootstrapping application that can speed up your development. It uses the popular MongoDB database with Mongoose schemas, the backend web framework Express.js, the frontend library React.js that ws created by Facebook and Node.js. Authentication via Json Web Tokens is used with the Passport middleware and customizable linting is built in using eslint.
+
+Visit it at: <a href="https://thedevconnector.herokuapp.com" target="_blank"> https://thedevconnector.herokuapp.com</a>
 
 <img src="img/home.png">
 
