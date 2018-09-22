@@ -17,7 +17,7 @@ Visit it at: <a href="https://thedevconnector.herokuapp.com" target="_blank"> ht
 
 <br>
 <h3>Users Profiles</h3>
-<img src="github-screenshots/developers.png">
+<img src="github-screenshots/users-profiles.png">
 
 <br>
 <h3>Post Feed</h3>
