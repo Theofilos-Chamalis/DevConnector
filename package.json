@@ -23,16 +23,12 @@
 		"bcryptjs": "^2.4.3",
 		"body-parser": "^1.18.3",
 		"concurrently": "^4.0.1",
-		"express": "^4.16.3",
+		"express": "^4.16.4",
 		"gravatar": "^1.6.0",
 		"jsonwebtoken": "^8.3.0",
-		"mongoose": "^5.2.17",
+		"mongoose": "^5.3.9",
 		"passport": "^0.4.0",
 		"passport-jwt": "^4.0.0",
-		"validator": "^10.7.1"
-	},
-	"devDependencies": {
-		"eslint": "^5.6.0",
-		"eslint-plugin-react": "^7.11.1"
+		"validator": "^10.8.0"
 	}
 }
