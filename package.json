@@ -30,5 +30,9 @@
 		"passport": "^0.4.0",
 		"passport-jwt": "^4.0.0",
 		"validator": "^10.8.0"
+	},
+	"devDependencies": {
+		"eslint": "^5.6.0",
+		"eslint-plugin-react": "^7.11.1"
 	}
 }
