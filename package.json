@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Social network for developers",
 	"engines": {
-		"node": "10.13.0"
+		"node": "10.15.1"
 	},
 	"main": "server.js",
 	"scripts": {
@@ -22,17 +22,14 @@
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
 		"body-parser": "^1.18.3",
-		"concurrently": "^4.0.1",
+		"concurrently": "^4.1.0",
 		"express": "^4.16.4",
-		"gravatar": "^1.6.0",
-		"jsonwebtoken": "^8.3.0",
-		"mongoose": "^5.3.9",
+		"gravatar": "^1.8.0",
+		"jsonwebtoken": "^8.4.0",
+		"mongoose": "^5.4.10",
 		"passport": "^0.4.0",
 		"passport-jwt": "^4.0.0",
-		"validator": "^10.8.0"
+		"validator": "^10.11.0"
 	},
-	"devDependencies": {
-		"eslint": "^5.6.0",
-		"eslint-plugin-react": "^7.11.1"
-	}
+	"devDependencies": {}
 }
