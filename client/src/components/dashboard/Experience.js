@@ -20,8 +20,8 @@ class Experience extends Component {
 					{exp.to === null ? (
 						' Now'
 					) : (
-						<Moment format="YYYY/MM/DD">{exp.to}</Moment>
-					)}
+							<Moment format="YYYY/MM/DD">{exp.to}</Moment>
+						)}
 				</td>
 				<td>
 					<button

@@ -13,8 +13,8 @@ class ProfileCreds extends Component {
 					{exp.to === null ? (
 						' Now'
 					) : (
-						<Moment format="YYYY/MM/DD">{exp.to}</Moment>
-					)}
+							<Moment format="YYYY/MM/DD">{exp.to}</Moment>
+						)}
 				</p>
 				<p>
 					<strong>Position:</strong> {exp.title}
@@ -46,8 +46,8 @@ class ProfileCreds extends Component {
 					{edu.to === null ? (
 						' Now'
 					) : (
-						<Moment format="YYYY/MM/DD">{edu.to}</Moment>
-					)}
+							<Moment format="YYYY/MM/DD">{edu.to}</Moment>
+						)}
 				</p>
 				<p>
 					<strong>Degree:</strong> {edu.degree}
@@ -73,16 +73,16 @@ class ProfileCreds extends Component {
 					{expItems.length > 0 ? (
 						<ul className="list-group">{expItems}</ul>
 					) : (
-						<p className="text-center">No Experience Listed</p>
-					)}
+							<p className="text-center">No Experience Listed</p>
+						)}
 				</div>
 				<div className="col-md-6">
 					<h3 className="text-center text-info">Education</h3>
 					{eduItems.length > 0 ? (
 						<ul className="list-group">{eduItems}</ul>
 					) : (
-						<p className="text-center">No Education Listed</p>
-					)}
+							<p className="text-center">No Education Listed</p>
+						)}
 				</div>
 			</div>
 		);
