@@ -65,7 +65,7 @@ class Navbar extends Component {
 
 		// Return is only for JSX
 		return (
-			<nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+			<nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4 sticky-top">
 				<div className="container">
 					<Link className="navbar-brand" to="/">
 						DevConnector
