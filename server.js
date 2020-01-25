@@ -21,6 +21,7 @@ const db = require('./config/keys').mongoURI;
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
 
 // Connect to MongoDB
 mongoose
