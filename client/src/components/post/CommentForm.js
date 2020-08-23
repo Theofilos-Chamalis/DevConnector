@@ -13,7 +13,7 @@ class CommentForm extends Component {
 		};
 	}
 
-	componentWillReceiveProps(newProps) {
+	UNSAFE_componentWillReceiveProps(newProps) {
 		if (newProps.errors) {
 			this.setState({ errors: newProps.errors });
 		}

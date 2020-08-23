@@ -28,7 +28,7 @@ class Register extends Component {
 	}
 
 	// If we receive new error props we are going to put them in the component state
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 		if (nextProps.errors) {
 			this.setState({ errors: nextProps.errors });
 		}
