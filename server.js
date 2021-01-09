@@ -11,7 +11,7 @@ const posts = require('./routes/api/posts');
 const app = express();
 
 // Body parser middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // DB Config
@@ -25,9 +25,9 @@ mongoose.set('useUnifiedTopology', true);
 
 // Connect to MongoDB
 mongoose
-	.connect(db)
-	.then(() => console.log('MongoDB Connected'))
-	.catch(err => console.log(`MongoDB Connection Error: ${err}`));
+    .connect(db)
+    .then(() => console.log('MongoDB Connected'))
+    .catch(err => console.log(`MongoDB Connection Error: ${err}`));
 
 // Passport middleware
 app.use(passport.initialize());
@@ -42,13 +42,13 @@ app.use('/api/posts', posts);
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
-	// Set static folder
-	app.use(express.static('client/build'));
+    // Set static folder
+    app.use(express.static('client/build'));
 
-	// Load the React index.html built file
-	app.get('*', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-	});
+    // Load the React index.html built file
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
 }
 
 const port = process.env.PORT || 5000;
