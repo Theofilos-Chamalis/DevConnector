@@ -3,7 +3,7 @@
 	"version": "1.2.0",
 	"description": "Social network for developers",
 	"engines": {
-		"node": "12"
+		"node": "14"
 	},
 	"main": "server.js",
 	"scripts": {
