@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const expressStaticGzip = require('express-static-gzip');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const path = require('path');
@@ -37,11 +38,12 @@ app.use('/api/posts', posts);
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
-    app.use(express.static('client/build'));
+    // app.use(express.static('client/build'));
+    app.use('/', expressStaticGzip('client/build', {enableBrotli: true}));
 
     // Load the React index.html built file
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html.br'));
     });
 }
 
