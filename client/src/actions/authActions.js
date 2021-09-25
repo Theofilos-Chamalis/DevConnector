@@ -1,7 +1,7 @@
 import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
-import { GET_ERRORS, SET_CURRENT_USER } from './types';
+import {GET_ERRORS, SET_CURRENT_USER} from './types';
 
 // registerUser Action Creator
 // We want to wait for the response from the server and then dispatch the action
@@ -24,7 +24,7 @@ export const loginUser = userData => dispatch => {
         .post('/api/users/login', userData)
         .then(res => {
             // Save to localStorage
-            const { token } = res.data;
+            const {token} = res.data;
             // Set token to localStorage
             localStorage.setItem('jwtToken', token);
             // Set token to Auth header

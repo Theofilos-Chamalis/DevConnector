@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import PostItem from '../posts/PostItem';
 import CommentForm from './CommentForm';
 import CommentFeed from '../post/CommentFeed';
 import Spinner from '../common/Spinner';
-import { getPost } from '../../actions/postActions';
+import {getPost} from '../../actions/postActions';
 
 class Post extends Component {
     componentDidMount() {
@@ -14,17 +14,17 @@ class Post extends Component {
     }
 
     render() {
-        const { post, loading } = this.props.post;
+        const {post, loading} = this.props.post;
         let postContent;
 
         if (post === null || loading || Object.keys(post).length === 0) {
-            postContent = <Spinner />;
+            postContent = <Spinner/>;
         } else {
             postContent = (
                 <div>
-                    <PostItem post={post} showActions={false} />
-                    <CommentForm postId={post._id} />
-                    <CommentFeed comments={post.comments} postId={post._id} />
+                    <PostItem post={post} showActions={false}/>
+                    <CommentForm postId={post._id}/>
+                    <CommentFeed comments={post.comments} postId={post._id}/>
                 </div>
             );
         }
@@ -57,5 +57,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { getPost }
+    {getPost}
 )(Post);

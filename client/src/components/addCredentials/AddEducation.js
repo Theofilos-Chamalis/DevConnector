@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link, withRouter} from 'react-router-dom';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import { addEducation } from '../../actions/profileActions';
+import {addEducation} from '../../actions/profileActions';
 
 class AddEducation extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class AddEducation extends Component {
 
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
+            this.setState({errors: nextProps.errors});
         }
     }
 
@@ -51,11 +51,11 @@ class AddEducation extends Component {
     };
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     };
 
     render() {
-        const { errors } = this.state;
+        const {errors} = this.state;
 
         return (
             <div className="add-education">
@@ -156,5 +156,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { addEducation }
+    {addEducation}
 )(withRouter(AddEducation));

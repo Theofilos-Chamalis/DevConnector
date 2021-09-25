@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { addComment } from '../../actions/postActions';
+import {addComment} from '../../actions/postActions';
 
 class CommentForm extends Component {
     constructor(props) {
@@ -15,15 +15,15 @@ class CommentForm extends Component {
 
     UNSAFE_componentWillReceiveProps(newProps) {
         if (newProps.errors) {
-            this.setState({ errors: newProps.errors });
+            this.setState({errors: newProps.errors});
         }
     }
 
     onSubmit = e => {
         e.preventDefault();
 
-        const { user } = this.props.auth;
-        const { postId } = this.props;
+        const {user} = this.props.auth;
+        const {postId} = this.props;
 
         const newComment = {
             text: this.state.text,
@@ -32,15 +32,15 @@ class CommentForm extends Component {
         };
 
         this.props.addComment(postId, newComment);
-        this.setState({ text: '' });
+        this.setState({text: ''});
     };
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     };
 
     render() {
-        const { errors } = this.state;
+        const {errors} = this.state;
 
         return (
             <div className="post-form mb-3">
@@ -82,5 +82,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { addComment }
+    {addComment}
 )(CommentForm);

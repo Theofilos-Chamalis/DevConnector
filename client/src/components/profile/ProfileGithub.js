@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class ProfileGithub extends Component {
@@ -14,8 +14,8 @@ class ProfileGithub extends Component {
     }
 
     componentDidMount() {
-        const { username } = this.props;
-        const { count, sort, clientId, clientSecret } = this.state;
+        const {username} = this.props;
+        const {count, sort, clientId, clientSecret} = this.state;
 
         fetch(
             `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
@@ -23,14 +23,14 @@ class ProfileGithub extends Component {
             .then(res => res.json())
             .then(data => {
                 if (this.refs.myRef) {
-                    this.setState({ repos: data });
+                    this.setState({repos: data});
                 }
             })
             .catch(error => console.log(error));
     }
 
     render() {
-        const { repos } = this.state;
+        const {repos} = this.state;
 
         const repoItems = repos.map(repo => (
             <div key={repo.id} className="card card-body mb-2">
@@ -60,7 +60,7 @@ class ProfileGithub extends Component {
 
         return (
             <div ref="myRef">
-                <hr />
+                <hr/>
                 <h3 className="mb-4">Latest Github Repos</h3>
                 {repoItems}
             </div>

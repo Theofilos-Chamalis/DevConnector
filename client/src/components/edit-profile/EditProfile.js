@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import { Link, withRouter } from 'react-router-dom';
-import { createProfile, getCurrentProfile } from '../../actions/profileActions';
+import {Link, withRouter} from 'react-router-dom';
+import {createProfile, getCurrentProfile} from '../../actions/profileActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 import InputGroup from '../common/InputGroup';
@@ -37,7 +37,7 @@ class CreateProfile extends Component {
 
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
+            this.setState({errors: nextProps.errors});
         }
 
         if (nextProps.profile.profile) {
@@ -113,11 +113,11 @@ class CreateProfile extends Component {
     };
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     };
 
     render() {
-        const { errors, displaySocialInputs } = this.state;
+        const {errors, displaySocialInputs} = this.state;
 
         let socialInputs;
 
@@ -170,15 +170,15 @@ class CreateProfile extends Component {
 
         // Select options for status
         const options = [
-            { label: 'Select Professional Status *', value: 0 },
-            { label: 'Developer', value: 'Developer' },
-            { label: 'Junior Developer', value: 'Junior Developer' },
-            { label: 'Senior Developer', value: 'Senior Developer' },
-            { label: 'Manager', value: 'Manager' },
-            { label: 'Student', value: 'Student' },
-            { label: 'Instructor/Teacher', value: 'Instructor/Teacher' },
-            { label: 'Intern', value: 'Intern' },
-            { label: 'Other', value: 'Other' }
+            {label: 'Select Professional Status *', value: 0},
+            {label: 'Developer', value: 'Developer'},
+            {label: 'Junior Developer', value: 'Junior Developer'},
+            {label: 'Senior Developer', value: 'Senior Developer'},
+            {label: 'Manager', value: 'Manager'},
+            {label: 'Student', value: 'Student'},
+            {label: 'Instructor/Teacher', value: 'Instructor/Teacher'},
+            {label: 'Intern', value: 'Intern'},
+            {label: 'Other', value: 'Other'}
         ];
 
         return (
@@ -301,5 +301,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { createProfile, getCurrentProfile }
+    {createProfile, getCurrentProfile}
 )(withRouter(CreateProfile));

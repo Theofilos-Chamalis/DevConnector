@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 // Pass properties in the functional (stateless) component
 const TextFieldGroup = ({
-    name,
-    placeholder,
-    value,
-    error,
-    info,
-    type,
-    onChange,
-    disabled
-}) => {
+                            name,
+                            placeholder,
+                            value,
+                            error,
+                            info,
+                            type,
+                            onChange,
+                            disabled
+                        }) => {
     return (
         <div className="form-group">
             <input

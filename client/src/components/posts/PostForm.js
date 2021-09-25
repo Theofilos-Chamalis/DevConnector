@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { addPost } from '../../actions/postActions';
+import {addPost} from '../../actions/postActions';
 
 class PostForm extends Component {
     constructor(props) {
@@ -15,14 +15,14 @@ class PostForm extends Component {
 
     UNSAFE_componentWillReceiveProps(newProps) {
         if (newProps.errors) {
-            this.setState({ errors: newProps.errors });
+            this.setState({errors: newProps.errors});
         }
     }
 
     onSubmit = e => {
         e.preventDefault();
 
-        const { user } = this.props.auth;
+        const {user} = this.props.auth;
         const newPost = {
             text: this.state.text,
             name: user.name,
@@ -30,15 +30,15 @@ class PostForm extends Component {
         };
 
         this.props.addPost(newPost);
-        this.setState({ text: '' });
+        this.setState({text: ''});
     };
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     };
 
     render() {
-        const { errors } = this.state;
+        const {errors} = this.state;
 
         return (
             <div className="post-form mb-3">
@@ -79,5 +79,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { addPost }
+    {addPost}
 )(PostForm);

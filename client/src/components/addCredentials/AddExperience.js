@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link, withRouter} from 'react-router-dom';
 import TextFieldGroup from '../common/TextFieldGroup';
 import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import { addExperience } from '../../actions/profileActions';
+import {addExperience} from '../../actions/profileActions';
 
 class AddExperience extends Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class AddExperience extends Component {
 
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
+            this.setState({errors: nextProps.errors});
         }
     }
 
@@ -51,11 +51,11 @@ class AddExperience extends Component {
     };
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     };
 
     render() {
-        const { errors } = this.state;
+        const {errors} = this.state;
 
         return (
             <div className="add-experience">
@@ -158,5 +158,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { addExperience }
+    {addExperience}
 )(withRouter(AddExperience));

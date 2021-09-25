@@ -18,20 +18,20 @@ const User = require('../../models/User');
 // @route   GET api/users/test
 // @desc    Tests users route
 // @access  Public
-router.get('/test', (req, res) => res.json({ msg: 'users works' }));
+router.get('/test', (req, res) => res.json({msg: 'users works'}));
 
 // @route   POST api/users/register
 // @desc    Register user
 // @access  Public
 router.post('/register', (req, res) => {
-    const { errors, isValid } = validateRegisterInput(req.body); // Destructuring
+    const {errors, isValid} = validateRegisterInput(req.body); // Destructuring
 
     // Check Validation
     if (!isValid) {
         return res.status(400).json(errors);
     }
 
-    User.findOne({ email: req.body.email }).then(user => {
+    User.findOne({email: req.body.email}).then(user => {
         if (user) {
             errors.email = 'Email already exists';
             return res.status(400).json(errors);
@@ -74,7 +74,7 @@ router.post('/register', (req, res) => {
 // @desc    Login User / Returning JWT Token
 // @access  Public
 router.post('/login', (req, res) => {
-    const { errors, isValid } = validateLoginInput(req.body); // Destructuring
+    const {errors, isValid} = validateLoginInput(req.body); // Destructuring
 
     // Check Validation
     if (!isValid) {
@@ -85,7 +85,7 @@ router.post('/login', (req, res) => {
     const password = req.body.password;
 
     // Find  user by email
-    User.findOne({ email }).then(user => {
+    User.findOne({email}).then(user => {
         // Check for user
         if (!user) {
             errors.email = 'User not found';
@@ -96,13 +96,13 @@ router.post('/login', (req, res) => {
         bcrypt.compare(password, user.password).then(isMatched => {
             if (isMatched) {
                 // User Matched
-                const payload = { id: user.id, name: user.name, avatar: user.avatar }; // Create JWT payload
+                const payload = {id: user.id, name: user.name, avatar: user.avatar}; // Create JWT payload
 
                 // Sign Token: payload(user info), secret key, expiration
                 jwt.sign(
                     payload,
                     keys.secretOrKey,
-                    { expiresIn: 3600 },
+                    {expiresIn: 3600},
                     (err, token) => {
                         res.json({
                             success: true,
@@ -123,7 +123,7 @@ router.post('/login', (req, res) => {
 // @access  Private
 router.get(
     '/current',
-    passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', {session: false}),
     (req, res) => {
         res.json({
             id: req.user.id,

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { registerUser } from '../../actions/authActions';
+import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {registerUser} from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 
 class Register extends Component {
@@ -30,13 +30,13 @@ class Register extends Component {
     // If we receive new error props we are going to put them in the component state
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
+            this.setState({errors: nextProps.errors});
         }
     }
 
     // We need this for 2 way binding
     onChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     }
 
     onSubmit(e) {
@@ -53,7 +53,7 @@ class Register extends Component {
     }
 
     render() {
-        const { errors } = this.state;
+        const {errors} = this.state;
 
         return (
             <div className="register">
@@ -102,7 +102,7 @@ class Register extends Component {
                                     value={this.state.password2}
                                     name="password2"
                                 />
-                                <input type="submit" className="btn btn-info btn-block mt-4" />
+                                <input type="submit" className="btn btn-info btn-block mt-4"/>
                             </form>
                         </div>
                     </div>
@@ -127,5 +127,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { registerUser }
+    {registerUser}
 )(withRouter(Register));

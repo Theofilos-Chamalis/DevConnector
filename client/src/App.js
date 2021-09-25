@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
 import store from './store';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
-import { logoutUser, setCurrentUser } from './actions/authActions';
-import { clearCurrentProfile } from './actions/profileActions';
+import {logoutUser, setCurrentUser} from './actions/authActions';
+import {clearCurrentProfile} from './actions/profileActions';
 import PrivateRoute from './components/common/PrivateRoute';
 
 import Navbar from './components/layout/Navbar';
@@ -54,15 +54,15 @@ class App extends Component {
             <Provider store={store}>
                 <Router>
                     <div className="App">
-                        <Navbar />
-                        <Route exact path="/" component={Landing} />
+                        <Navbar/>
+                        <Route exact path="/" component={Landing}/>
                         <div className="container">
-                            <Route exact path="/register" component={Register} />
-                            <Route exact path="/login" component={Login} />
-                            <Route exact path="/profiles" component={Profiles} />
-                            <Route exact path="/profile/:handle" component={Profile} />
+                            <Route exact path="/register" component={Register}/>
+                            <Route exact path="/login" component={Login}/>
+                            <Route exact path="/profiles" component={Profiles}/>
+                            <Route exact path="/profile/:handle" component={Profile}/>
                             <Switch>
-                                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                                <PrivateRoute exact path="/dashboard" component={Dashboard}/>
                             </Switch>
                             <Switch>
                                 <PrivateRoute
@@ -93,14 +93,14 @@ class App extends Component {
                                 />
                             </Switch>
                             <Switch>
-                                <PrivateRoute exact path="/feed" component={Posts} />
+                                <PrivateRoute exact path="/feed" component={Posts}/>
                             </Switch>
                             <Switch>
-                                <PrivateRoute exact path="/post/:id" component={Post} />
+                                <PrivateRoute exact path="/post/:id" component={Post}/>
                             </Switch>
-                            <Route exact path="/not-found" component={NotFound} />
+                            <Route exact path="/not-found" component={NotFound}/>
                         </div>
-                        <Footer />
+                        <Footer/>
                     </div>
                 </Router>
             </Provider>

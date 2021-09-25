@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import isEmpty from '../../validation/is-empty';
 
 class ProfileAbout extends Component {
     render() {
-        const { profile } = this.props;
+        const {profile} = this.props;
 
         // Get first name
         const firstName = profile.user.name.trim().split(' ')[0];
@@ -12,7 +12,7 @@ class ProfileAbout extends Component {
         //Skill list
         const skills = profile.skills.map((skill, index) => (
             <div key={index} className="p-3">
-                <i className="fa fa-check" /> {skill}
+                <i className="fa fa-check"/> {skill}
             </div>
         ));
 
@@ -25,10 +25,10 @@ class ProfileAbout extends Component {
                             {isEmpty(profile.bio) ? (
                                 <span>{firstName} has not filed a bio</span>
                             ) : (
-                                    <span>{profile.bio}</span>
-                                )}
+                                <span>{profile.bio}</span>
+                            )}
                         </p>
-                        <hr />
+                        <hr/>
                         <h3 className="text-center text-info">Skill Set</h3>
                         <div className="row">
                             <div className="d-flex flex-wrap justify-content-center align-items-center">

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import { addLike, deletePost, removeLike } from '../../actions/postActions';
+import {Link} from 'react-router-dom';
+import {addLike, deletePost, removeLike} from '../../actions/postActions';
 
 class PostItem extends Component {
     onDeleteClick = (event, id) => {
@@ -22,7 +22,7 @@ class PostItem extends Component {
     };
 
     findUserLike(likes) {
-        const { auth } = this.props;
+        const {auth} = this.props;
         if (likes.filter(like => like.user === auth.user.id).length > 0) {
             return true;
         } else {
@@ -31,7 +31,7 @@ class PostItem extends Component {
     }
 
     render() {
-        const { post, auth, showActions } = this.props;
+        const {post, auth, showActions} = this.props;
 
         return (
             <div className="card card-body mb-3">
@@ -44,7 +44,7 @@ class PostItem extends Component {
                                 alt=""
                             />
                         </a>
-                        <br />
+                        <br/>
                         <p className="text-center">{post.name}</p>
                     </div>
                     <div className="col-md-10">
@@ -68,7 +68,7 @@ class PostItem extends Component {
                                     onClick={event => this.onUnlikeClick(event, post._id)}
                                     className="btn btn-light mr-1"
                                 >
-                                    <i className="text-secondary fas fa-thumbs-down" />
+                                    <i className="text-secondary fas fa-thumbs-down"/>
                                 </button>
                                 <Link to={`/post/${post._id}`} className="btn btn-info mr-1">
                                     Comments
@@ -79,7 +79,7 @@ class PostItem extends Component {
                                         type="button"
                                         onClick={event => this.onDeleteClick(event, post._id)}
                                     >
-                                        <i className="fas fa-times" />
+                                        <i className="fas fa-times"/>
                                     </button>
                                 ) : null}
                             </span>
@@ -109,5 +109,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { deletePost, addLike, removeLike }
+    {deletePost, addLike, removeLike}
 )(PostItem);

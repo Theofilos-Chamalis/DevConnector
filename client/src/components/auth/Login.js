@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { loginUser } from '../../actions/authActions';
+import {connect} from 'react-redux';
+import {loginUser} from '../../actions/authActions';
 import TextFieldGroup from '../common/TextFieldGroup';
 
 class Login extends Component {
@@ -15,7 +15,7 @@ class Login extends Component {
     }
 
     onChange = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({[e.target.name]: e.target.value});
     };
 
     onSubmit = e => {
@@ -41,12 +41,12 @@ class Login extends Component {
         }
 
         if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
+            this.setState({errors: nextProps.errors});
         }
     }
 
     render() {
-        const { errors } = this.state;
+        const {errors} = this.state;
 
         return (
             <div className="login">
@@ -74,7 +74,7 @@ class Login extends Component {
                                     value={this.state.password}
                                     name="password"
                                 />
-                                <input type="submit" className="btn btn-info btn-block mt-4" />
+                                <input type="submit" className="btn btn-info btn-block mt-4"/>
                             </form>
                         </div>
                     </div>
@@ -97,5 +97,5 @@ const mapStateToProps = state => ({
 
 export default connect(
     mapStateToProps,
-    { loginUser }
+    {loginUser}
 )(Login);
