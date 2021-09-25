@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Moment from 'react-moment';
+import dayjs from 'dayjs';
 
 class ProfileCreds extends Component {
     render() {
@@ -9,12 +9,11 @@ class ProfileCreds extends Component {
             <li key={exp._id} className="list-group-item">
                 <h4>{exp.company}</h4>
                 <p>
-                    <Moment format="YYYY/MM/DD">{exp.from}</Moment> -
-                    {exp.to === null ? (
-                        ' Now'
-                    ) : (
-                        <Moment format="YYYY/MM/DD">{exp.to}</Moment>
-                    )}
+                    {dayjs(exp.from).format('YYYY/MM/DD')} - {exp.to === null ? (
+                    ' Now'
+                ) : (
+                    dayjs(exp.to).format('YYYY/MM/DD')
+                )}
                 </p>
                 <p>
                     <strong>Position:</strong> {exp.title}
@@ -42,12 +41,11 @@ class ProfileCreds extends Component {
             <li key={edu._id} className="list-group-item">
                 <h4>{edu.school}</h4>
                 <p>
-                    <Moment format="YYYY/MM/DD">{edu.from}</Moment> -
-                    {edu.to === null ? (
-                        ' Now'
-                    ) : (
-                        <Moment format="YYYY/MM/DD">{edu.to}</Moment>
-                    )}
+                    {dayjs(edu.from).format('YYYY/MM/DD')} - {edu.to === null ? (
+                    ' Now'
+                ) : (
+                    dayjs(edu.to).format('YYYY/MM/DD')
+                )}
                 </p>
                 <p>
                     <strong>Degree:</strong> {edu.degree}
