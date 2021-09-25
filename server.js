@@ -39,7 +39,7 @@ app.use('/api/posts', posts);
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
     // app.use(express.static('client/build'));
-    app.use('client/build', expressStaticGzip('client/build', {enableBrotli: true}));
+    app.use('/', expressStaticGzip('client/build', {enableBrotli: true, index: false}));
 
     // Load the React index.html built file
     app.get('*', (req, res) => {
