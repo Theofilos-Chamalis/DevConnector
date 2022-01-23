@@ -22,19 +22,18 @@
 	"license": "MIT",
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
-		"body-parser": "^1.19.0",
 		"compression": "^1.7.4",
-		"express": "^4.17.1",
+		"express": "^4.17.2",
 		"gravatar": "^1.8.2",
-		"helmet": "^4.6.0",
+		"helmet": "^5.0.2",
 		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^6.0.12",
-		"passport": "^0.5.0",
+		"mongoose": "^6.1.7",
+		"passport": "^0.5.2",
 		"passport-jwt": "^4.0.0",
 		"validator": "^13.7.0"
 	},
 	"devDependencies": {
-		"concurrently": "^6.4.0",
+		"concurrently": "^7.0.0",
 		"nodemon": "^2.0.15"
 	}
 }
