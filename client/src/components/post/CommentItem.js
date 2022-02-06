@@ -21,6 +21,7 @@ class CommentItem extends Component {
                                 className="rounded-circle d-none d-md-block"
                                 src={comment.avatar}
                                 alt=""
+                                crossOrigin={true}
                             />
                         </a>
                         <br/>

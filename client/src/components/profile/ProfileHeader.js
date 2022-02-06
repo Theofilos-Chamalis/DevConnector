@@ -15,6 +15,7 @@ class ProfileHeader extends Component {
                                     className="rounded-circle"
                                     src={profile.user.avatar}
                                     alt=""
+                                    crossOrigin={true}
                                 />
                             </div>
                         </div>

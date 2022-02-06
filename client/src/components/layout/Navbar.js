@@ -41,6 +41,7 @@ class Navbar extends Component {
                             className="rounded-circle"
                             title="You must have a Gravatar connected to your email to display an image"
                             style={{width: '25px', marginRight: '5px'}}
+                            crossOrigin={true}
                         />
                         Logout
                     </Link>

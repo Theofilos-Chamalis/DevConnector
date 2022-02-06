@@ -42,6 +42,7 @@ class PostItem extends Component {
                                 className="rounded-circle d-none d-md-block"
                                 src={post.avatar}
                                 alt=""
+                                crossOrigin={true}
                             />
                         </a>
                         <br/>
