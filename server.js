@@ -21,6 +21,8 @@ app.use(compression());
 // DB Config
 const db = require('./config/keys').mongoURI;
 
+mongoose.set('strictQuery', false);
+
 // Connect to MongoDB
 mongoose
     .connect(db)

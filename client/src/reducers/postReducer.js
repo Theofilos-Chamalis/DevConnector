@@ -6,7 +6,7 @@ const initialState = {
     loading: false
 };
 
-export default function (state = initialState, action) {
+export default function postReducer (state = initialState, action) {
     switch (action.type) {
         case POST_LOADING:
             return {
