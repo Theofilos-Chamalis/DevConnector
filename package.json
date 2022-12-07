@@ -4,13 +4,13 @@
 	"private": true,
 	"description": "Social network for developers",
 	"engines": {
-		"node": "16"
+		"node": "18"
 	},
 	"main": "server.js",
 	"scripts": {
 		"client-install": "npm i --prefix client",
 		"server-install": "npm i",
-		"install-all": "npm i && npm i --prefix client",
+		"install-all": "npm i && cd client && npm i client && cd ..",
 		"start": "node server.js",
 		"backend": "nodemon server.js",
 		"client": "npm start --prefix client",
