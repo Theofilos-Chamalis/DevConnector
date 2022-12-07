@@ -10,7 +10,7 @@
 	"scripts": {
 		"client-install": "npm i --prefix client",
 		"server-install": "npm i",
-		"install-all": "npm i && cd client && npm i client && cd ..",
+		"install-all": "npm run server-install && npm run client-install",
 		"start": "node server.js",
 		"backend": "nodemon server.js",
 		"client": "npm start --prefix client",
