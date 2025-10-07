@@ -27,7 +27,7 @@
 		"gravatar": "^1.8.2",
 		"helmet": "^6.2.0",
 		"jsonwebtoken": "^9.0.2",
-		"mongoose": "^8.19.0",
+		"mongoose": "^8.19.1",
 		"passport": "^0.6.0",
 		"passport-jwt": "^4.0.1",
 		"validator": "^13.15.15"
